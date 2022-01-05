@@ -1,0 +1,186 @@
+:root {
+    font-family: 'Outfit', sans-serif;
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-transparent: hsla(178, 100%, 50%, 0.5);
+    --soft-blue: hsl(215, 51%, 70%);
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 1em;
+    color: var(--soft-blue);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    padding: 5% 5% 0% 5%;
+    font-weight: 300;
+    border: 1em solid transparent;
+    border-radius: 2vh;
+    display: block;
+    margin: 10% auto; 
+}
+
+.card > div {
+    padding: 2% 0%;
+}
+
+.nft-img-container {
+    position: relative;
+}
+
+.nft-img {
+    width: 100%;
+    border: .1em solid transparent;
+    border-radius: 5vh;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: var(--cyan-transparent);
+    border: .01em solid transparent;
+    border-radius: 5vh;
+}
+
+.nft-img-container:hover .icon {
+    opacity: 1;
+    border: .01em solid transparent;
+    border-radius: 5vh;
+}
+
+.view-icon {
+    display: block;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0%;
+    opacity: 1;
+}
+
+
+h1 {
+    color: white;
+    font-weight: 600;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cost {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10%;
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.time {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+}
+
+hr {
+    color: var(--soft-blue);
+    border: .01em solid var(--soft-blue);
+}
+
+.creator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.creator img {
+    width: 10%;
+    border: .1em solid white;
+    border-radius: 50%;
+}
+
+.creator a {
+    font-weight: 600;
+    color: white;
+}
+
+a:hover {
+    color: var(--cyan, cyan);
+}
+
+.attribution { 
+    font-size: .6875em; 
+    text-align: center; 
+    padding: 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 2000px) {
+    .card {
+        width: 30%;
+        height: 30%;
+        font-size: 2em;
+    }
+
+    .card > div {
+        padding: 0% 2% 1%;
+    }
+
+    .details img {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .card {
+        width: 30%;
+        height: 30%;
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 50%;
+        height: 50%;
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 95%;
+        height: 100%;
+        font-size: .5em;
+    }
+}
+
